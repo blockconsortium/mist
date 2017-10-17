@@ -2,21 +2,21 @@
 {
     "clients": {
         "Gexp": {
-            "version": "1.7.0-unstable",
+            "version": "1.7.2-stable",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "be34a8019fe7673efb1b7354738e9be8",
+                            "md5": "128ecd824d2f6fa8a6de3fb34fcbfe4c",
                             "bin": "gexp-linux-amd64/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "output": [ "Gexp", "1.7.2-stable" ]
                             }
                         }
                     },
@@ -24,14 +24,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-linux-386.tar.gz",
                             "type": "tar",
-                            "md5": "37037863d401fb2aa71a8068f8d5158e",
+                            "md5": "2edbfa56fd4fee9927cd98178e7b904d",
                             "bin": "gexp-linux-386/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "output": [ "Gexp", "1.7.2-stable" ]
                             }
                         }
                     }
@@ -41,14 +41,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "9107551e8c107a29e7f28c7a449cfb46",
+                            "md5": "12eea2341ad8459df9c8e3a1b4d83b9d",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "output": [ "Gexp", "1.7.2-stable" ]
                             }
                         }
                     }
@@ -58,14 +58,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "d1ee991dadbf60a6c238aa0ef7133171",
+                            "md5": "3a88a27e9ed903d317ae5e9c83965795",
                             "bin": "gexp-windows-amd64\\gexp.exe"
                         },
                         "bin": "gexp.exe",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "output": [ "Gexp", "1.7.2-stable" ]
                             }
                         }
                     },
@@ -73,14 +73,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-windows-386.zip",
                             "type": "zip",
-                            "md5": "5f926ea78fd52802778c782e428610b8",
+                            "md5": "ffe35d684109b7deb83b5d30277f2d1c",
                             "bin": "gexp-windows-386\\gexp.exe"
                         },
                         "bin": "gexp.exe",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.7.0-unstable" ]
+                                "output": [ "Gexp", "1.7.2-stable" ]
                             }
                         }
                     }
