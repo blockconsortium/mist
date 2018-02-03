@@ -19,7 +19,6 @@ sacha:spin
 chuangbo:cookie
 agnito:simptip
 mrt:jquery-ui-sortable
-ethereum:web3
 expanse:elements
 ethereum:accounts
 ethereum:blocks
@@ -44,3 +43,5 @@ shell-server
 ecmascript
 numeral:numeral
 numeral:languages
+expanse:tools
+expanse:web3

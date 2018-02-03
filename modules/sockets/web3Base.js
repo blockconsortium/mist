@@ -94,7 +94,7 @@ module.exports = class Web3Socket extends Socket {
 
 
     /**
-     * Handle responses from Gexp.
+     * Handle responses from Geth.
      */
     _handleSocketResponse() {
         oboe(this)

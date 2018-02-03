@@ -17,6 +17,7 @@ if (typeof window.dbSync !== 'undefined') {
     History = window.dbSync.frontendSyncInit(History);
 }
 
+
 // ETHEREUM RELATED
 
 // Accounts collection is add by the ethereum:accounts package
@@ -25,7 +26,7 @@ if (typeof window.dbSync !== 'undefined') {
 
 // contains blockchain meta data
 // LastBlock = new Mongo.Collection('lastblock', {connection: null});
-// new PersistentMinimongo2(LastBlock, 'Mist-Expanse');
+// new PersistentMinimongo2(LastBlock, 'Mist');
 // if(!LastBlock.findOne('latest'))
 //     LastBlock.insert({
 //         _id: 'latest',

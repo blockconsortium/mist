@@ -14,3 +14,4 @@ The about template
 Template['popupWindows_about'].onCreated(function () {
 
 });
+

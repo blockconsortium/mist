@@ -44,7 +44,7 @@
                     "zh-TW": "國語"
                 }
             },
-            "accounts": {
+            "file": {
                 "label": "Accounts",
                 "importPresale": "Importeer Accounts",
                 "newAccount": "Nieuw account",
@@ -53,6 +53,7 @@
                 "backupMist": "Applicatie Data"
             },
             "develop": {
+                "uploadToSwarm": "Uploaden naar Swarm",
                 "label": "Ontwikkelen",
                 "devTools": "Ontwikkelaars Opties Inschakelen",
                 "devToolsMistUI": "Mist UI",
@@ -68,7 +69,7 @@
                 "fullNode": "Bewaar volledige blockchain",
                 "lightNode": "Gebruik light Node (experimenteel!)",
                 "mainNetwork": "Hoofdnetwerk",
-                "startMining": "⛏ Start Mining (Alleen testnet)",
+                "startMining": "⛏ Start Mining",
                 "stopMining": "⛏ Stop Mining"
             },
             "window": {
@@ -116,8 +117,8 @@
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
             "mainnetExplain": "Je zit op het main Expanse wereldwijde netwerk",
-            "testnetExplain": "Je bent actief op het __name__, VERSTUUR GEEN echte Expanse naar deze adressen",
-            "privatenetExplain": "Je zit op een private net, VERSTUUR GEEN echte Expanse naar deze adressen",
+            "testnetExplain": "Je bent actief op het __name__, VERSTUUR GEEN echte Ether naar deze adressen",
+            "privatenetExplain": "Je zit op een private net, VERSTUUR GEEN echte Ether naar deze adressen",
             "unknownnetExplain": "Niet in staat om te bepalen op welk netwerk je zit",
             "peers": "peers"
         },
@@ -137,8 +138,8 @@
             "startingNode": "Expanse node starten...",
             "stoppingNode": "Expanse node stoppen...",
             "startedNode": "Applicatie starten...",
-            "nodeConnectionTimeout": "Expanse node opstarten niet mogelijk!<br><small>Als je <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Of meld een fout </a></small>",
-            "nodeBinaryNotFound": "Geen Expanse node gevonden!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
+            "nodeConnectionTimeout": "Expanse node opstarten niet mogelijk!<br><small>Als je <a href='https://www.expanse.tech' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Of meld een fout </a></small>",
+            "nodeBinaryNotFound": "Geen Expanse node gevonden!<br><small> <a href='https://www.expanse.tech' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
             "nodeStarting": "Expanse node opstarten...",
             "nodeStarted": "Expanse node gestart",
             "nodeConnected": "Expanse node verbonden",
@@ -209,7 +210,7 @@
                 "transactionThrow": "Het contract staat niet toe dat deze transactie wordt uitgevoerd",
                 "noEstimate": "We konden de hoeveelheid gas niet inschatten.",
                 "gasPrice": "Gas prijs",
-                "perMillionGas": "Expanse per millioen gas",
+                "perMillionGas": "Ether per millioen gas",
                 "gasLimit": "Geef maximum transactie kosten aan",
                 "data": "Ruwe Data",
                 "parameters": "Parameters",
@@ -220,7 +221,7 @@
                     "connectionTimeout": "Kon niet verbinden met de node, is het in de achtergrond uitgevallen?",
                     "wrongPassword": "Onjuist wachtwoord",
                     "multipleKeysMatchAddress": "Meerdere keys matchen hebben hetzelfde adres, verwijder duplicaten uit de keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Onvoldoende saldo in hoofd account (Expansebase) om gas te betalen",
+                    "insufficientFundsForGas": "Onvoldoende saldo in hoofd account (Etherbase) om gas te betalen",
                     "sameAccount": "Kan niet naar zichzelf versturen"
                 },
                 "showRawBytecode": "Toon ruwe data",
@@ -232,10 +233,10 @@
             },
             "onboarding": {
                 "description": "Expanse is een decentraal platform voor het bouwen van applicaties op een blockchain: software die immuun is voor fraude en levenslang waarde en eigendom over kan brengen",
-                "goToTestnet": "Gebruik het test netwerk",
-                "goToTestnetDescription": "Test de technologie vrij in een testongeving, zonder echte Expanse te gebruiken.",
+                "goToTestnet": "Gebruik het test netwerk (Rinkeby)",
+                "goToTestnetDescription": "Test de technologie vrij in een testongeving, zonder echte Ether te gebruiken.",
                 "gotoMainnet": "Gebruik hoofdnetwerk",
-                "gotoMainnetDescription": "Je zult een beetje Expanse nodig hebben om contracten uit te voeren. Geen zorgen, we helpen je met het verkrijgen...",
+                "gotoMainnetDescription": "Je zult een beetje Ether nodig hebben om contracten uit te voeren. Geen zorgen, we helpen je met het verkrijgen...",
                 "doYouHaveAWalletFile": "Heb je een wallet bestand?",
                 "walletFileDescription": "<p>Als je mee hebt gedaan met de Expanse voorverkoop van 2014 zou je een bestand met de naam <code>ethereum_wallet_backup.json</code> ontvangen moeten hebben. Je kon dit bestand downloaden na je contributie en is ook per email verstuurd</p>",
                 "dropFilesHere": "Sleep voorverkoop bestand hier",
@@ -247,11 +248,11 @@
                 "protectDescription": "Kies een wachtwoord voor je nieuwe account. Maak het even veilig alsof het uw huissleutels zijn!",
                 "accountTitle": "Opladen!",
                 "accountTitleTestnet": "Mine wat!",
-                "etherDescription": "Het Expanse netwerk is gebaseerd op het “Expanse” token. Je zal een kleine hoeveelheid nodig hebben om dingen op het netwerk te doen.",
-                "loadItDescription": "Als je al Bitcoins of een andere cryptocurrency hebt kan je deze makkelijk inwisselen voor Expanse met Shapeshift.<br><br> Wij raden aan een hoeveelheid van tussen de <strong>0.25 en 1 Expanse</strong> om te wisselen.",
-                "mineItDescription": "<strong>Op het testnetwerk kun je zelf Expanse mijnen door te gaan naar het <em>Ontwikkelaars</em> menu en te kiezen voor <em>Begin Mining</em>. </strong> <br> <strong> PROBEER GEEN ECHTE ETHER NAAR DIT ADRES TE VERSTUREN </strong>",
+                "etherDescription": "Het Expanse netwerk is gebaseerd op het “Ether” token. Je zal een kleine hoeveelheid nodig hebben om dingen op het netwerk te doen.",
+                "loadItDescription": "Als je al Bitcoins of een andere cryptocurrency hebt kan je deze makkelijk inwisselen voor Ether met Shapeshift.<br><br> Wij raden aan een hoeveelheid van tussen de <strong>0.25 en 1 Ether</strong> om te wisselen.",
+                "mineItDescription": "<strong>Op het testnetwerk kun je zelf Ether mijnen door te gaan naar het <em>Ontwikkelaars</em> menu en te kiezen voor <em>Begin Mining</em>. </strong> <br> <strong> PROBEER GEEN ECHTE EXPANSE NAAR DIT ADRES TE VERSTUREN </strong>",
                 "you": "Je",
-                "etherbase": "Centrale account (Expansebase)",
+                "etherbase": "Centrale account (Etherbase)",
                 "depositBitcoin": "Bitcoin Storten",
                 "viaShapeshift": "Direct omwisselen via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
                 "learnIt": "Leer terwijl je wacht",

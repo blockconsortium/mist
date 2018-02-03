@@ -30,7 +30,6 @@ class Manager extends EventEmitter {
         // check every hour
         setInterval(() => this._checkForNewConfig(true), 1000 * 60 * 60);
 
-        this._resolveEthBinPath();
         return this._checkForNewConfig(restart);
     }
 
@@ -72,7 +71,7 @@ class Manager extends EventEmitter {
             log.warn('Error fetching client binaries config from repo', err);
         })
         .then((latestConfig) => {
-            if(!latestConfig) return;
+            if (!latestConfig) return;
 
             let localConfig;
             let skipedVersion;
@@ -153,6 +152,7 @@ class Manager extends EventEmitter {
                             this._writeLocalConfig(latestConfig);
 
                             resolve(latestConfig);
+
                         // skip
                         } else if (update === 'skip') {
                             fs.writeFileSync(
@@ -271,6 +271,7 @@ class Manager extends EventEmitter {
         });
     }
 
+
     _emit(status, msg) {
         log.debug(`Status: ${status} - ${msg}`);
 
@@ -296,7 +297,7 @@ class Manager extends EventEmitter {
             __dirname,
             '..',
             'nodes',
-            'exp',
+            'eth',
             `${platform}-${process.arch}`
         );
 

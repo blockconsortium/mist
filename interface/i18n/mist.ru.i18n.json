@@ -26,7 +26,7 @@
                 "fullscreen": "Полноэкранный режим",
                 "default": "По умолчанию"
             },
-            "accounts": {
+            "file": {
                 "label": "Аккаунты",
                 "importPresale": "Импорт аккаунтов",
                 "newAccount": "Создать аккаунт",
@@ -35,6 +35,7 @@
                 "backupMist": "Данных приложения"
             },
             "develop": {
+                "uploadToSwarm": "Загрузить в Swarm",
                 "label": "Дополнительно",
                 "devTools": "Выбрать инструмент разработчика",
                 "devToolsMistUI": "Mist UI",
@@ -45,7 +46,7 @@
                 "ethereumNode": "Expanse-нода",
                 "network": "Сеть",
                 "mainNetwork": "Основная сеть",
-                "startMining": "⛏ Запустить майнинг (только для тестовой сети)",
+                "startMining": "⛏ Запустить майнинг",
                 "stopMining": "⛏ Остановить майнинг",
                 "externalNode": "using external node",
                 "openRemix": "Open Remix IDE",
@@ -119,8 +120,8 @@
             "startingNode": "Запуск Expanse-ноды...",
             "stoppingNode": "Остановка Expanse-ноды...",
             "startedNode": "Запуск приложения...",
-            "nodeConnectionTimeout": "Не удалось запустить Expanse-ноду!<br><small>Если вы <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'>установили Gexp</a>, используйте следующую команду для запуска: <br> <code>gexp --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
-            "nodeBinaryNotFound": "Не найдены программные файлы для Expanse-ноды!<br><small> <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
+            "nodeConnectionTimeout": "Не удалось запустить Expanse-ноду!<br><small>Если вы <a href='https://www.expanse.tech' class='button' target='_blank'>установили Geth</a>, используйте следующую команду для запуска: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
+            "nodeBinaryNotFound": "Не найдены программные файлы для Expanse-ноды!<br><small> <a href='https://www.expanse.tech' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
             "nodeStarting": "Expanse-нода запускается...",
             "nodeStarted": "Expanse-нода запущена",
             "nodeConnected": "Expanse-нода подключена",
@@ -203,8 +204,8 @@
                 "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
             },
             "onboarding": {
-                "description": "Expanseium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
-                "goToTestnet": "Использовать тестовую сеть",
+                "description": "Etherium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
+                "goToTestnet": "Использовать тестовую сеть (Rinkeby)",
                 "goToTestnetDescription": "Свободное тестирование технологии в тестовой сети (sandbox), без использования реального эфира.",
                 "gotoMainnet": "Использовать основную сеть",
                 "gotoMainnetDescription": "Вам потребуется некоторое количество эфира для того, чтобы создавать и выполнять контракты. Не волнуйтесь, мы вам поможем получить некоторое количество...",
@@ -218,8 +219,8 @@
                 "protectTitle": "Защитите ваш аккаунт",
                 "protectDescription": "Выберите пароль для новой учетной записи. Придумайте такой пароль, как будто он защитит ваши ключи от дома!",
                 "accountTitle": "Загрузите его!",
-                "etherDescription": "Сеть Expanse основана на маркерах называемых “Expanse” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети Expanseium.",
-                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (Expanse) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
+                "etherDescription": "Сеть Expanse основана на маркерах называемых “Ether” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети Etherium.",
+                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (Ether) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
                 "mineItDescription": "<strong>В тестовой сети вы можете добыть (намайнить) эфир сами, перейдя в меню <em>Дополнительно</em> и выбрав <em>Запустить майнинг</em>. </strong> <br> <strong> НЕ ПЫТАЙТЕСЬ ОТПРАВИТЬ РЕАЛЬНЫЙ ЭФИР НА ЭТОТ АДРЕС</strong>",
                 "you": "ВЫ",
                 "etherbase": "Основной аккаунт (etherbase)",

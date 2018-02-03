@@ -25,11 +25,11 @@ CRCCheck on
 # Require admin privledges when UAC is on
 RequestExecutionLevel admin
 
-!define APPNAME "Mist"
-!define GROUPNAME "Expanse"
+!searchreplace APPNAMENOHYPEN ${APPNAME} "-" " "
+!define GROUPNAME "Ethereum"
 !define HELPURL "https://github.com/expanse-org/mist/releases/issues"
 !define UPDATEURL "https://github.com/expanse-org/mist/releases"
-!define ABOUTURL "https://expanse.tech"
+!define ABOUTURL "https://ethereum.org"
 !define /date NOW "%Y%m%d"
 
 ## These must be integers and can be set on the command line by NSIS with "/DMAJORVERSION=0 /DMINORVERSION=8 /DBUILDVERSION=7"
@@ -39,8 +39,8 @@ RequestExecutionLevel admin
 
 # Define some script globals
 Name "${GROUPNAME} ${APPNAME}"
-Icon "..\dist_mist\build\icon.ico"
-OutFile "..\dist_mist\release\mist-installer-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.exe"
+Icon "..\dist_${TYPE}\build\icon.ico"
+OutFile "..\dist_${TYPE}\release\${APPNAME}-installer-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.exe"
 var FILEDIR
 var DATADIR
 var NODEDATADIR
@@ -65,8 +65,8 @@ ${EndIf}
 
     SetShellVarContext current
     StrCpy $DATADIR "$APPDATA\${APPNAME}"
-    StrCpy $NODEDATADIR "$APPDATA\Expanse"
-    StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAME}"
+    StrCpy $NODEDATADIR "$APPDATA\Ethereum"
+    StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAMENOHYPEN}"
     StrCpy $DESKTOPDIR "$DESKTOP"
 
     ${If} ${RunningX64}
@@ -136,9 +136,9 @@ Section Mist MIST_IDX
     # set the installation directory as the destination for the following actions
     SetOutPath $TEMP
     # include both architecture zip files
-    file "..\dist_mist\release\${APPNAME}-win64-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip"
-    file "..\dist_mist\release\${APPNAME}-win32-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip"
-    file "..\dist_mist\build\icon.ico"
+    file "..\dist_${TYPE}\release\${APPNAME}-win64-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip"
+    file "..\dist_${TYPE}\release\${APPNAME}-win32-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.zip"
+    file "..\dist_${TYPE}\build\icon.ico"
 
     # Extract the zip file from TEMP to the user's selected installation directory
     ${If} ${RunningX64}
@@ -159,18 +159,18 @@ Section Mist MIST_IDX
 
     # create shortcuts with flags in the start menu programs directory
     createDirectory "$SHORTCUTDIR"
-    createShortCut "$SHORTCUTDIR\${APPNAME}.lnk" "$FILEDIR\${APPNAME}.exe" '--node-datadir="$NODEDATADIR"' "$FILEDIR\${APPNAME}.exe" 0
+    createShortCut "$SHORTCUTDIR\${APPNAMENOHYPEN}.lnk" "$FILEDIR\${APPNAMENOHYPEN}.exe" '--node-datadir="$NODEDATADIR"' "$FILEDIR\${APPNAMENOHYPEN}.exe" 0
 
     # create desktop shortcut
-    createShortCut "$DESKTOPDIR\${APPNAME}.lnk" "$FILEDIR\${APPNAME}.exe" '--node-datadir="$NODEDATADIR"' "$FILEDIR\${APPNAME}.exe" 0
+    createShortCut "$DESKTOPDIR\${APPNAMENOHYPEN}.lnk" "$FILEDIR\${APPNAMENOHYPEN}.exe" '--node-datadir="$NODEDATADIR"' "$FILEDIR\${APPNAMENOHYPEN}.exe" 0
 
     # create a shortcut for the program uninstaller
     CreateShortCut "$SHORTCUTDIR\Uninstall.lnk" "$FILEDIR\uninstall.exe"
 
     ## Firewall - add rules
-    #SimpleFC::AdvAddRule "Geth incoming peers (TCP:42786)" ""  6 1 1 2147483647 1 "$DATADIR\binaries\Gexp\unpacked\gexp.exe" "" "" "Expanse" 42786 "" "" ""
-    #SimpleFC::AdvAddRule "Geth outgoing peers (TCP:42786)" ""  6 2 1 2147483647 1 "$DATADIR\binaries\Gexp\unpacked\gexp.exe" "" "" "Expanse" "" 42786 "" ""
-    #SimpleFC::AdvAddRule "Geth UDP discovery (UDP:42786)" "" 17 2 1 2147483647 1 "$DATADIR\binaries\Gexp\unpacked\gexp.exe" "" "" "Expanse" "" 42786 "" ""
+    #SimpleFC::AdvAddRule "Geth incoming peers (TCP:30303)" ""  6 1 1 2147483647 1 "$DATADIR\binaries\Geth\unpacked\geth.exe" "" "" "Ethereum" 30303 "" "" ""
+    #SimpleFC::AdvAddRule "Geth outgoing peers (TCP:30303)" ""  6 2 1 2147483647 1 "$DATADIR\binaries\Geth\unpacked\geth.exe" "" "" "Ethereum" "" 30303 "" ""
+    #SimpleFC::AdvAddRule "Geth UDP discovery (UDP:30303)" "" 17 2 1 2147483647 1 "$DATADIR\binaries\Geth\unpacked\geth.exe" "" "" "Ethereum" "" 30303 "" ""
 
     # write registry strings for uninstallation
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${GROUPNAME} ${APPNAME}" "DisplayName" "${GROUPNAME} ${APPNAME}"
@@ -237,9 +237,9 @@ Section "uninstall"
     rmDir /r /REBOOTOK "$FILEDIR"
 
     ## Firewall - remove rules (if exists)
-    #SimpleFC::AdvRemoveRule "Gexp incoming peers (TCP:42786)"
-    #SimpleFC::AdvRemoveRule "Gexp outgoing peers (TCP:42786)"
-    #SimpleFC::AdvRemoveRule "Gexp UDP discovery (UDP:42786)"
+    #SimpleFC::AdvRemoveRule "Geth incoming peers (TCP:30303)"
+    #SimpleFC::AdvRemoveRule "Geth outgoing peers (TCP:30303)"
+    #SimpleFC::AdvRemoveRule "Geth UDP discovery (UDP:30303)"
 
     # delete registry strings
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${GROUPNAME} ${APPNAME}"

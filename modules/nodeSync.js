@@ -35,7 +35,7 @@ class NodeSync extends EventEmitter {
 
         this._syncPromise = Q.try(() => {
             if (!ethereumNode.isIpcConnected) {
-                throw new Error('Cannot sync - Expanse node not yet connected');
+                throw new Error('Cannot sync - Ethereum node not yet connected');
             }
 
             return new Q((resolve, reject) => {
@@ -145,12 +145,15 @@ class NodeSync extends EventEmitter {
                         return ethereumNode.send('eth_getBlockByNumber', ['latest', false])
                             .then((ret2) => {
                                 const blockResult = ret2.result;
-
                                 const now = Math.floor(new Date().getTime() / 1000);
 
-                                const diff = now - +blockResult.timestamp;
+                                if (!blockResult) {
+                                    return this._sync();
+                                }
 
-                                log.debug(`Last block: ${Number(blockResult.number)}, ${diff}s ago`);
+                                log.debug(`Last block: ${Number(blockResult.number)}; timestamp: ${blockResult.timestamp}`);
+
+                                const diff = now - +blockResult.timestamp;
 
                                 // need sync if > 1 minute
                                 if (diff > 60) {
@@ -180,13 +183,13 @@ class NodeSync extends EventEmitter {
         switch (state) {  // eslint-disable-line default-case
             // stop syncing when node about to be stopped
         case ethereumNode.STATES.STOPPING:
-            log.info('Expanse node stopping, so stop sync');
+            log.info('Ethereum node stopping, so stop sync');
 
             this.stop();
             break;
             // auto-sync whenever node gets connected
         case ethereumNode.STATES.CONNECTED:
-            log.info('Expanse node connected, re-start sync');
+            log.info('Ethereum node connected, re-start sync');
 
                 // stop syncing, then start again
             this.stop().then(() => {

@@ -12,7 +12,7 @@ test['Title test'] = function* () {
     const client = this.client;
 
     yield client.waitUntilWindowLoaded();
-    (yield client.getTitle()).should.eql('Expanse Wallet');
+    (yield client.getTitle()).should.eql('Ethereum Wallet');
 }
 
 test['account balances'] = function* () {
@@ -21,6 +21,7 @@ test['account balances'] = function* () {
 
     const realBalances = this.getRealAccountBalances();
     const appBalances = this.getUiAccountBalances();
+
     realBalances.should.not.be.null;
     realBalances.should.eql('5');
     appBalances.should.eql(realBalances);

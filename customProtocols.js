@@ -22,6 +22,8 @@ protocol.registerHttpProtocol('mist', (request, callback) => {
     }
 });
 
+
+// protocol.registerProtocol('eth', function(request) {
 //     var url = request.url.substr(7)
 //     return new protocol.RequestStringJob({data: 'Hello'});
 // });
@@ -30,5 +32,6 @@ protocol.registerHttpProtocol('mist', (request, callback) => {
 //     var url = request.url.substr(7)
 //     return new protocol.RequestStringJob({data: 'Hello'});
 // });
+
 
 // protocol.registerStandardSchemes(['mist','eth', 'bzz']); //'eth', 'bzz'

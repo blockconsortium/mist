@@ -90,16 +90,17 @@ ipc.on('backendAction_windowMessageToOwner', (e, error, value) => {
     }
 });
 
-ipc.on('backendAction_setLanguage', (e, lang) => {
-    if (global.language !== lang) {
-        global.i18n.changeLanguage(lang.substr(0, 5), (err) => {
-            if (!err) {
-                global.language = global.i18n.language;
-                log.info('Backend language set to: ', global.language);
-                appMenu(global.webviews);
-            }
-        });
-    }
+ipc.on('backendAction_setLanguage', (e) => {
+    global.i18n.changeLanguage(Settings.language.substr(0, 5), (err) => {
+        if (!err) {
+            log.info('Backend language set to: ', global.i18n.language);
+            appMenu(global.webviews);
+        }
+    });
+});
+
+ipc.on('backendAction_getLanguage', (e) => {
+    e.returnValue = Settings.language;
 });
 
 ipc.on('backendAction_stopWebviewNavigation', (e, id) => {
@@ -144,13 +145,17 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                     }
                 // geth
                 } else {
-                    if (process.platform === 'darwin') keystorePath += '/Library/Expanse/keystore';
+                    if (process.platform === 'darwin') keystorePath += '/Library/Ethereum/keystore';
 
                     if (process.platform === 'freebsd' ||
                         process.platform === 'linux' ||
-                        process.platform === 'sunos') keystorePath += '/.expanse/keystore';
+                        process.platform === 'sunos') keystorePath += '/.ethereum/keystore';
 
-                    if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\Expanse\\keystore`;
+                    if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+                }
+
+                if (!/^[0-9a-fA-F]{40}$/.test(keyfile.address)) {
+                    throw new Error('Invalid Address format.');
                 }
 
                 fs.writeFile(`${keystorePath}/0x${keyfile.address}`, data, (err) => {
@@ -176,12 +181,13 @@ ipc.on('backendAction_importWalletFile', (e, path, pw) => {
     const spawn = require('child_process').spawn;  // eslint-disable-line global-require
     const ClientBinaryManager = require('./clientBinaryManager');  // eslint-disable-line global-require
     let error = false;
-    const binPath = ClientBinaryManager.getClient('gexp').binPath;
+
+    const binPath = ClientBinaryManager.getClient('geth').binPath;
     const nodeProcess = spawn(binPath, ['wallet', 'import', path]);
 
     nodeProcess.once('error', () => {
         error = true;
-        e.sender.send('uiAction_importedWalletFile', 'Couldn\'t start the "gexp wallet import <file.json>" process.');
+        e.sender.send('uiAction_importedWalletFile', 'Couldn\'t start the "geth wallet import <file.json>" process.');
     });
     nodeProcess.stdout.on('data', (_data) => {
         const data = _data.toString();

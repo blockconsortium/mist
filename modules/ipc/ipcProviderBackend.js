@@ -16,13 +16,12 @@ const log = require('../utils/logger').create('ipcProviderBackend');
 const Sockets = require('../socketManager');
 const Settings = require('../settings');
 const ethereumNode = require('../ethereumNode');
-const Windows = require('../windows');
 
 
 const ERRORS = {
-    INVALID_PAYLOAD: { code: -32600, message: 'Payload, or some of its content properties are invalid. Please check if they are valid HEX.' },
-    METHOD_DENIED: { code: -32601, message: "Method \'__method__\' not allowed." },
-    METHOD_TIMEOUT: { code: -32603, message: "Request timed out for method  \'__method__\'." },
+    INVALID_PAYLOAD: { code: -32600, message: "Payload, or some of its content properties are invalid. Please check if they are valid HEX with '0x' prefix." },
+    METHOD_DENIED: { code: -32601, message: 'Method __method__ not allowed.' },
+    METHOD_TIMEOUT: { code: -32603, message: 'Request timed out for method  __method__.' },
     TX_DENIED: { code: -32603, message: 'Transaction denied' },
     BATCH_TX_DENIED: { code: -32603, message: 'Transactions denied, sendTransaction is not allowed in batch requests.' },
     BATCH_COMPILE_DENIED: { code: -32603, message: 'Compilation denied, compileSolidity is not allowed in batch requests.' },
@@ -99,7 +98,6 @@ class IpcProviderBackend {
                         log.debug(`Destroy socket connection due to event: ${ev}, id=${ownerId}`);
 
                         socket.destroy().finally(() => {
-
                             if (!owner.isDestroyed()) { owner.send(`ipcProvider-${ev}`, JSON.stringify(data)); }
                         });
 
@@ -146,7 +144,7 @@ class IpcProviderBackend {
                                     if (ethereumNode.STATES.CONNECTED === newState) {
                                         ethereumNode.removeListener('state', onStateChange);
 
-                                        log.debug(`Expanse node connected, resume connecting socket ${ownerId}`);
+                                        log.debug(`Ethereum node connected, resume connecting socket ${ownerId}`);
 
                                         resolve();
                                     }
@@ -201,7 +199,7 @@ class IpcProviderBackend {
 
 
     /**
-     * Handler for when Expanse node state changes.
+     * Handler for when Ethereum node state changes.
      *
      * Auto-reconnect sockets when ethereum node state changes
      *
@@ -211,7 +209,7 @@ class IpcProviderBackend {
         switch (state) {  // eslint-disable-line default-case
             // stop syncing when node about to be stopped
         case ethereumNode.STATES.STOPPING:
-            log.info('Expanse node stopping, disconnecting sockets');
+            log.info('Ethereum node stopping, disconnecting sockets');
 
             Q.all(_.map(this._connections, (item) => {
                 if (item.socket.isConnected) {

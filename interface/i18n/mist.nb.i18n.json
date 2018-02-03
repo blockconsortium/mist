@@ -26,7 +26,7 @@
                 "fullscreen": "Veksle Mellom Fullskjerm",
                 "default": "Default"
             },
-            "accounts": {
+            "file": {
                 "label": "Kontoer",
                 "importPresale": "Importer Kontoer",
                 "newAccount": "Ny konto",
@@ -35,6 +35,7 @@
                 "backupMist": "Applikasjonsdata"
             },
             "develop": {
+                "uploadToSwarm": "Opplasting til Swarm",
                 "label": "Utvikle",
                 "devTools": "Veksle Mellom Utviklerverktøy",
                 "devToolsMistUI": "Mist UI",
@@ -45,7 +46,7 @@
                 "ethereumNode": "Expanse Node",
                 "network": "Nettverk",
                 "mainNetwork": "Hovednettverk",
-                "startMining": "⛏ Start Mining (Kun testnett)",
+                "startMining": "⛏ Start Mining",
                 "stopMining": "⛏ Stopp Mining",
                 "externalNode": "using external node",
                 "openRemix": "Open Remix IDE",
@@ -119,8 +120,8 @@
             "startingNode": "Starter Expanse-node...",
             "stoppingNode": "Stopper Expanse-node...",
             "startedNode": "Starter applikasjonen...",
-            "nodeConnectionTimeout": "Kunne ikke starte Expanse-node!<br><small>Hvis du <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'>installerte Gexp</a>, bruk denne kommandoen for å kjøre det: <br> <code>gexp --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
-            "nodeBinaryNotFound": "Ingen Expanse-node kilde funnet!<br><small> <a href='https://www.ethereum.org/cli#gexp' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
+            "nodeConnectionTimeout": "Kunne ikke starte Expanse-node!<br><small>Hvis du <a href='https://www.expanse.tech' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
+            "nodeBinaryNotFound": "Ingen Expanse-node kilde funnet!<br><small> <a href='https://www.expanse.tech' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
             "nodeStarting": "Expanse-node starter opp...",
             "nodeStarted": "Expanse-node startet",
             "nodeConnected": "Expanse-node tilkoblet",
@@ -202,7 +203,7 @@
             },
             "onboarding": {
                 "description": "Expanse er en desentralisert plattform for å bygge applikasjoner på en blokkjede: sabotasjesikker programvare som kan overføre verdi og eiendom, og som lever evig",
-                "goToTestnet": "Bruk testnettet",
+                "goToTestnet": "Bruk testnettet (Rinkeby)",
                 "goToTestnetDescription": "Test teknologien fritt i en sandboks (testnett), uten å bruke ekte ether.",
                 "gotoMainnet": "Bruk hovednettverket",
                 "gotoMainnetDescription": " Du trenger noen ether for å skape og utføre kontrakter. Ikke bekymre deg, vi vil hjelpe deg å skaffe noen...",
@@ -219,7 +220,7 @@
                 "accountTitleTestnet": "Mine noen!",
                 "etherDescription": "Expanse-nettverket er basert på en enhet kalt \"ether\". Du trenger en liten mengde av den for å gjøre noe på Expanse-nettverket.",
                 "loadItDescription": "Hvis du allerede eier bitcoin, eller hvilken som helst annen kryptovaluta, kan du enkelt konvertere den til ether via Shapeshift. <br><br> Vi anbefaler å fylle opp med mellom <strong>0.25 til 1 ether</strong>.",
-                "mineItDescription": "<strong>På testnettet kan du mine ether selv ved å gå til <em>Utvikle</em> menyvalget og velge <em>Start Mining</em>. </strong> <br> <strong> IKKE PRØV Å SENDE EKTE ETHER TIL DENNE ADRESSEN </strong>",
+                "mineItDescription": "<strong>På testnettet kan du mine ether selv ved å gå til <em>Utvikle</em> menyvalget og velge <em>Start Mining</em>. </strong> <br> <strong> IKKE PRØV Å SENDE EKTE EXPANSE TIL DENNE ADRESSEN </strong>",
                 "you": "DU",
                 "etherbase": "Hovedkonto (etherbase)",
                 "depositBitcoin": "Sett inn bitcoin",

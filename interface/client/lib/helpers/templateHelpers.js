@@ -77,15 +77,6 @@ Template.registerHelper('appIconPath', function () {
 });
 
 /**
-Get the current user agent
-
-@method (useragent)
-**/
-Template.registerHelper('useragent', function () {
-    return navigator.userAgent + ' Expanse ' + (window.mistMode === 'mist' ? 'Mist' : 'Wallet');
-});
-
-/**
 Get all accounts
 
 @method (accounts)

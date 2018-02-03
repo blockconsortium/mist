@@ -26,8 +26,8 @@
                 "fullscreen": "Basculer en mode plein écran",
                 "default": "Default"
             },
-            "accounts": {
-                "label": "Comptes",
+            "file": {
+                "label": "Fichier",
                 "importPresale": "Importer les comptes",
                 "newAccount": "Nouveau compte",
                 "backup": "Sauvegarder",
@@ -35,6 +35,7 @@
                 "backupMist": "Données de l'application"
             },
             "develop": {
+                "uploadToSwarm": "Télécharger à Swarm",
                 "label": "Développement",
                 "devTools": "Outils de développement",
                 "devToolsMistUI": "Mist UI",
@@ -42,10 +43,10 @@
                 "devToolsWebview": "__webview__",
                 "runTests": "Lancer les tests",
                 "logFiles": "Afficher le journal de log",
-                "ethereumNode": "Nœud Expanse ",
+                "ethereumNode": "Nœud Expanse",
                 "network": "Réseau",
                 "mainNetwork": "Réseau principal",
-                "startMining": "⛏ Commencer à miner (seulement pour Testnet)",
+                "startMining": "⛏ Commencer à miner",
                 "stopMining": "⛏ Arrêter de miner",
                 "externalNode": "using external node",
                 "openRemix": "Open Remix IDE",
@@ -69,8 +70,8 @@
             "nodeStartup": "Le nœud n'a apparemment pas pu être lancé, en avez-vous déjà un de lancé ? Est-il en train de mettre à jour la base de données actuellement ?",
             "timeSync": {
                 "title": "L'horloge de votre ordinateur n'est pas synchronisée.",
-                "description": "Pour être correctement synchronisé avec le réseau Expanse , vous devez synchronizer l'horloge de votre ordinateur avec un serveur de synchronisation de temps.",
-                "win32": "Allez dans vos Paramètres d'heure Internet dans vos Panneau de configuration et cochez la case. Lisez ce guide pour plus de détails : http://www.guidingtech.com/3119/windows-clock-sync/",
+                "description": "Pour être correctement synchronisé avec le réseau Expanse, vous devez synchronizer l'horloge de votre ordinateur avec un serveur de synchronisation de temps.",
+                "win32": "Allez dans vos paramètres d'heure Internet dans votre panneau de configuration et cochez la case. Lisez ce guide pour plus de détails : http://www.guidingtech.com/3119/windows-clock-sync/",
                 "linux": "Pour activer un serveur de synchronisation de temps, installez \"ntp\" via \"apt-get install ntp\".",
                 "darwin": "Pour activer la synchronisation du temps, ouvrez les préférences de temps et cochez \"Régler la date et l'heure automatiquement\"."
             },
@@ -115,11 +116,11 @@
             }
         },
         "startScreen": {
-            "runningNodeFound": "Nœud Expanse  actif trouvé !!",
-            "startingNode": "Démarrage du nœud Expanse  en cours...",
+            "runningNodeFound": "Nœud Expanse actif trouvé !",
+            "startingNode": "Démarrage du nœud Expanse en cours...",
             "startedNode": "Démarrage de l'application...",
-            "nodeConnectionTimeout": "Echec du démarrage du nœud Expanse !<br><small>Si vous <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
-            "nodeBinaryNotFound": "Pas de binaire du nœud Expanse trouvé !<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
+            "nodeConnectionTimeout": "Echec du démarrage du nœud Expanse !<br><small>Si vous <a href='https://www.expanse.tech' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
+            "nodeBinaryNotFound": "Pas de binaire du nœud Expanse trouvé !<br><small> <a href='https://www.expanse.tech' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
             "nodeSyncing": "Le nœud Expanse se synchronise, veuillez patienter...",
             "nodeSyncInfo": "Télechargement du bloc __displayBlock__ depuis le bloc __highestBlock__.",
             "nodeSyncConnecting": "À la recherche de pairs...",
@@ -177,7 +178,7 @@
                 "estimatedFee": "Taxe de consommation estimée",
                 "estimatedGasError": "Les données n'ont pas pu être executées et vont donc utiliser tout le gaz fourni.",
                 "gasPrice": "Prix du gaz",
-                "perMillionGas": "exp par million de gaz",
+                "perMillionGas": "ether par million de gaz",
                 "gasLimit": "Fournir la taxe maximum",
                 "data": "Données",
                 "buttons": {
@@ -202,10 +203,10 @@
             },
             "onboarding": {
                 "description": "Expanse est une plateforme décentralisée pour la création d'applications sur une blockchain (chaîne de blocs) : logiciel inviolable qui peut transférer de la valeur et de la propriété et qui vit pour toujours",
-                "goToTestnet": "Utiliser le réseau Testnet",
+                "goToTestnet": "Utiliser le réseau Testnet (Rinkeby)",
                 "goToTestnetDescription": "Testez la technologie librement sur le réseau sandboxé (bac à sable), sans utiliser d'ether réel.",
                 "gotoMainnet": "Utiliser le réseau réel",
-                "gotoMainnetDescription": "Vous aurez besoin de quelques Expanse afin de créer et exécuter des contrats. Ne vous en faites pas, nous allons vous aider à en obtenir...",
+                "gotoMainnetDescription": "Vous aurez besoin de quelques Ether afin de créer et exécuter des contrats. Ne vous en faites pas, nous allons vous aider à en obtenir...",
                 "doYouHaveAWalletFile": "Avez-vous un fichier wallet ?",
                 "walletFileDescription": "<p>Si vous avez participé à la prévente Expanse 2014, vous devriez avoir un fichier nommé <code>ethereum_wallet_backup.json</code>. Il a été téléchargé après la vente et vous a aussi été envoyé par e-mail</p>",
                 "dropFilesHere": "Déposer un fichier de prévente ici",
@@ -217,9 +218,9 @@
                 "protectDescription": "Choisissez un mot de passe pour votre nouveau compte. Rendez-le aussi fort que s'il protégeait les clés de votre maison !",
                 "accountTitle": "Chargez le !",
                 "accountTitleTestnet": "Minez-en quelques-uns !",
-                "etherDescription": "Le réseau ethereum est basé sur un token (jeton) appelé “Expanse”. Vous aurez besoin d'un petit montant de cela pour faire ce que vous souhaitez sur le réseau Expanse.",
+                "etherDescription": "Le réseau ethereum est basé sur un token (jeton) appelé “Ether”. Vous aurez besoin d'un petit montant de cela pour faire ce que vous souhaitez sur le réseau Expanse.",
                 "loadItDescription": "Si vous possédez déjà des Bitcoin, ou n'importe quel autre crypto-monnaie, vous pouvez facilement les convertir en ether en utilisant shapeshift. <br><br> Nous recommandons d'en charger de <strong>0.25 à 1 ether</strong>.",
-                "mineItDescription": "<strong>Sur le réseau Testnet vous pouvez miner de l'ether vous-même en allant sur le menu <em>Développement</em> et en choisissant <em>Commencer à miner</em>. </strong> <br> <strong> N'ESSAYEZ PAS D'ENVOYER DU VERITABLE ETHER A CETTE ADRESSE </strong>",
+                "mineItDescription": "<strong>Sur le réseau Testnet vous pouvez miner de l'ether vous-même en allant sur le menu <em>Développement</em> et en choisissant <em>Commencer à miner</em>. </strong> <br> <strong> N'ESSAYEZ PAS D'ENVOYER DU VERITABLE EXPANSE A CETTE ADRESSE </strong>",
                 "you": "VOUS",
                 "etherbase": "Compte principal (etherbase)",
                 "depositBitcoin": "Déposer des Bitcoin",

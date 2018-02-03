@@ -2,15 +2,18 @@
 
 ## Issues / Bug reports
 
-**Read the existing issues first, and also search in the closed issues. You may find yours already.**
+**Prior to submitting, please search -and read- _both_ open and closed issues -as _it_ may already exist.**
 
-To help make Mist-Expanse (Expanse Wallet) better please file issue with the following basic descriptions:
+To help improve Mist (_Ethereum Wallet_), please include the following:
 
-- What do you run? binary from [releases](https://github.com/expanse-org/mist/releases) or the development version from the [commandline](https://github.com/expanse-org/mist#run-mist)
-- Which version do you used? You can find that in the `VERSION` file in the Mist folder
+- What do you run?  (_Binary version from [releases](https://github.com/expanse-org/mist/releases) or a development version from the [commandline](https://github.com/expanse-org/mist#run-mist)_)
+- Which version do you use? (_Check the `VERSION` file in the Mist folder_)
 - What OS you're on?
-- Provide a log file if necessary, you can find that in the Mist data folder (Linux: `~/.config/Mist/*.log`, Windows: `%APPDATA%/Roaming/Mist/*.log`, MacOSX: `~/Library/Application Support/Mist/*.log`)
-- Ideally also a screenshot, if its an interface issue
+
+If applicable:
+
+- Log file (Linux: `~/.config/Mist/*.log`, Windows: `%APPDATA%/Roaming/Mist/*.log`, MacOSX: `~/Library/Application Support/Mist/*.log`)
+- Screenshot (for GUI related issues)
 
 
 ## Pull Requests
@@ -23,7 +26,7 @@ If you add any modules or files, please give them a module description and or a 
 
 ```
 /**
-The IPC provider backend filter and tunnel all incoming request to the IPC gexp bridge.
+The IPC provider backend filter and tunnel all incoming request to the IPC geth bridge.
 
 @module ipcProviderBackend
 */

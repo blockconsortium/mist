@@ -7,12 +7,12 @@
             <div class="onboarding-section onboarding-start">
                 <p class="description">{{i18n "mist.popupWindows.onboarding.description"}}</p>
                 <p>
-                    <button class="start-testnet"> {{i18n "mist.popupWindows.onboarding.goToTestnet"}} </button>
-                    {{i18n "mist.popupWindows.onboarding.goToTestnetDescription"}}
+                  <button class="goto-import-account"> {{i18n "mist.popupWindows.onboarding.gotoMainnet"}} </button>
+                  {{i18n "mist.popupWindows.onboarding.gotoMainnetDescription"}}
                 </p>
                 <p>
-                    <button class="goto-import-account"> {{i18n "mist.popupWindows.onboarding.gotoMainnet"}} </button>
-                    {{i18n "mist.popupWindows.onboarding.gotoMainnetDescription"}}
+                    <button class="start-testnet"> {{i18n "mist.popupWindows.onboarding.goToTestnet"}} </button>
+                    {{i18n "mist.popupWindows.onboarding.goToTestnetDescription"}}
                 </p>
             </div>
 
@@ -35,7 +35,7 @@
 
             <div class="onboarding-section onboarding-account row">
                 {{#if TemplateVar.get "testnet"}}
-                    <h1>{{i18n "mist.popupWindows.onboarding.accountTitleTestnet"}} </h1>
+                    <h1>{{i18n "mist.popupWindows.onboarding.learnIt"}} </h1>
                 {{else}}
                     <h1>{{i18n "mist.popupWindows.onboarding.accountTitle"}} </h1>
                 {{/if}}
@@ -46,7 +46,7 @@
                     </p>
 
                     {{#if TemplateVar.get "testnet"}}
-                        <p>{{{i18n "mist.popupWindows.onboarding.mineItDescription"}}}</p>
+                        <p>{{{i18n "mist.popupWindows.onboarding.faucetDescription"}}}</p>
                     {{else}}
                         <p>{{{i18n "mist.popupWindows.onboarding.loadItDescription"}}}</p>
                     {{/if}}
@@ -59,10 +59,7 @@
                         <input type="text" value="{{i18n 'mist.popupWindows.onboarding.etherbase'}}" class="name" disabled>
                         <h6 class="address"> {{TemplateVar.get "newAccount"}} </h6>
 
-                        {{#unless TemplateVar.get "testnet"}}
-                            <a href="https://shapeshift.io/shifty.html?destination={{newAccountLowerCase}}&amp;output=ETH&amp;apiKey=22367b4a83df253d2f3c5d7316df3159835c6e3377684b585b56b694ba98aa751b0cb51f8dc263e248aece428adc4d28f686c37288055123bc17ffbfe753ab72" class="button dapp-block-button dapp-small shapeshift" target="_popup"> {{i18n "mist.popupWindows.onboarding.depositBitcoin"}}  </a>
-                            <h6> {{{i18n "mist.popupWindows.onboarding.viaShapeshift"}}} </h6>
-                        {{/unless}}
+
                     {{/if}}
                 </div>
                 <div class="col col-12 footer-buttons">
@@ -75,11 +72,11 @@
                 <h1> {{i18n "mist.popupWindows.onboarding.learnIt"}} </h1>
                 <div class="col col-6 col-left">
                     {{{i18n "mist.popupWindows.onboarding.tutorial1Description"}}}
-                    <p><a href="https://www.expanse.tech/token" class="button" target="_blank">{{i18n "mist.popupWindows.onboarding.buttons.learnReceipt"}}</a></p>
+                    <p><a href="https://www.tokenlab.io" class="button" target="_blank">{{i18n "mist.popupWindows.onboarding.buttons.learnReceipt"}}</a></p>
                 </div>
                 <div class="col col-6 tutorial-token"></div>
                 <div class="col col-12 footer-buttons">
-                    <button class="goto-start"> {{i18n "buttons.back"}} </button>
+                    <button class="goto-account"> {{i18n "buttons.back"}} </button>
                     <button class="goto-tutorial-2 right-align">  {{i18n "buttons.next"}} </button>
                 </div>
             </div>
@@ -88,7 +85,7 @@
                 <h1> {{i18n "mist.popupWindows.onboarding.learnIt"}} </h1>
                 <div class="col col-6 col-left">
                     {{{i18n "mist.popupWindows.onboarding.tutorial2Description"}}}
-                    <p><a href="https://www.expanse.tech/crowdsale" class="button" target="_blank">{{i18n "mist.popupWindows.onboarding.buttons.learnReceipt"}}</a></p>
+                    <p><a href="https://www.expanse.tech/" class="button" target="_blank">{{i18n "mist.popupWindows.onboarding.buttons.learnReceipt"}}</a></p>
                 </div>
                 <div class="col col-6 tutorial-crowdsale"></div>
                 <div class="col col-12 footer-buttons">
@@ -101,7 +98,7 @@
                 <h1> {{i18n "mist.popupWindows.onboarding.learnIt"}} </h1>
                 <div class="col col-6 col-left">
                     {{{i18n "mist.popupWindows.onboarding.tutorial3Description"}}}
-                    <p><a href="https://www.expanse.tech/dao" class="button" target="_blank">{{i18n "mist.popupWindows.onboarding.buttons.learnReceipt"}}</a></p>
+                    <p><a href="https://www.expanse.tech" class="button" target="_blank">{{i18n "mist.popupWindows.onboarding.buttons.learnReceipt"}}</a></p>
                 </div>
                 <div class="col col-6 tutorial-dao"></div>
                 <div class="col col-12 footer-buttons">

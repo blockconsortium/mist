@@ -26,8 +26,8 @@
                 "fullscreen": "Pantalla Completa",
                 "default": "Default"
             },
-            "accounts": {
-                "label": "Cuentas",
+            "file": {
+                "label": "Arquivo",
                 "importPresale": "Importar Cuentas",
                 "newAccount": "Nueva cuenta",
                 "backup": "Copia de seguridad",
@@ -35,6 +35,7 @@
                 "backupMist": "Datos de la aplicación"
             },
             "develop": {
+                "uploadToSwarm": "Upload a Swarm",
                 "label": "Desarrollo",
                 "devTools": "Herramientas para desarrolladores",
                 "devToolsMistUI": "UI de Mist",
@@ -42,10 +43,10 @@
                 "devToolsWebview": "__webview__",
                 "runTests": "Ejecutar pruebas",
                 "logFiles": "Mostrar archivo de registro",
-                "ethereumNode": "Nodo de Expanse ",
+                "ethereumNode": "Nodo de Expanse",
                 "network": "Red",
                 "mainNetwork": "Red principal",
-                "startMining": "⛏ Empezar a minar (sólo Testnet)",
+                "startMining": "⛏ Empezar a minar",
                 "stopMining": "⛏ Parar de minar",
                 "externalNode": "using external node",
                 "openRemix": "Open Remix IDE",
@@ -69,7 +70,7 @@
             "nodeStartup": "Parece que el nodo no se pudo iniciar, tiene uno ya funcionando? ¿Está actualizando la base de datos en este momento?",
             "timeSync": {
                 "title": "El reloj de su ordenador no está sincronizado.",
-                "description": "Para sincronizar correctamente con la red Expanse  necesitas sincronizar el reloj de tu ordenador con un servidor de tiempo.",
+                "description": "Para sincronizar correctamente con la red Expanse necesitas sincronizar el reloj de tu ordenador con un servidor de tiempo.",
                 "win32": "Ve a los ajustes del tiempo en las preferencias de sistema y marca la casilla. Vea esta guía para más detalles: http://www.guidingtech.com/3119/windows-clock-sync/",
                 "linux": "Para permitir la sincronización con un servidor de tiempo instale \"ntp\" vía \"apt-get install ntp\".",
                 "darwin": "Para habilitar la sincronización del tiempo, abra las preferencias de tiempo y marque \"Ajuste la hora y la fecha automáticamente\"."
@@ -115,13 +116,13 @@
             }
         },
         "startScreen": {
-            "runningNodeFound": "Encontrado nodo Expanse  funcionando!",
-            "startingNode": "Iniciando el nodo Expanse ...",
+            "runningNodeFound": "Encontrado nodo Expanse funcionando!",
+            "startingNode": "Iniciando el nodo Expanse...",
             "startedNode": "Iniciando la aplicación...",
-            "nodeConnectionTimeout": "No se pudo iniciar un nodo Expanse !<br><small>Si <a href='http://www.expanse.tech/#downloads' class='button' target='_blank'>has instalado Gexp</a>, utiliza este comando para ejecutarlo: <br> <code>gexp --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> O informa del problema </a></small>",
-            "nodeBinaryNotFound": "No se ha encontrado el binario del nodo Expanse !<br><small> <a href='http://www.expanse.tech/#downloads' class='button' target='_blank'> Por favor, inicie antes uno manualmente. </a> </small>",
-            "nodeSyncing": "El nodo de Expanse  necesita sincronizarse, por favor espere...",
-            "nodeSyncInfo": "Descargando bloque __currentBlock__ de __highestBlock__.",
+            "nodeConnectionTimeout": "No se pudo iniciar un nodo Expanse!<br><small>Si <a href='https://www.expanse.tech' class='button' target='_blank'>has instalado Geth</a>, utiliza este comando para ejecutarlo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/expanse-org/mist/issues' class='button' target='_blank'> O informa del problema </a></small>",
+            "nodeBinaryNotFound": "No se ha encontrado el binario del nodo Expanse!<br><small> <a href='https://www.expanse.tech' class='button' target='_blank'> Por favor, inicie antes uno manualmente. </a> </small>",
+            "nodeSyncing": "El nodo de Expanse necesita sincronizarse, por favor espere...",
+            "nodeSyncInfo": "Descargando bloque __displayBlock__ de __highestBlock__.",
             "nodeSyncConnecting": "Buscando pares...",
             "peerSearchTimeout": "Omitir la búsqueda de pares",
             "stoppingNode": "Stopping Expanse node...",
@@ -177,7 +178,7 @@
                 "estimatedFee": "Tasa de comisión estimada",
                 "estimatedGasError": "Los datos no pueden ser ejecutados por lo que se utilizá todo el gas proporcionado.",
                 "gasPrice": "Precio del Gas",
-                "perMillionGas": "exp por millón de gas",
+                "perMillionGas": "ether por millón de gas",
                 "gasLimit": "Proporcionar la tasa máxima",
                 "data": "Datos",
                 "buttons": {
@@ -202,10 +203,10 @@
             },
             "onboarding": {
                 "description": "Expanse es una plataforma descentralizada para la construcción de aplicaciones en una blockchain: segura y a prueba de manipulaciones que puede transferir valor, propiedad y vive para siempre",
-                "goToTestnet": "Utiliza la red de pruebas",
+                "goToTestnet": "Utiliza la red de pruebas (Rinkeby)",
                 "goToTestnetDescription": "Pruebe la tecnología libremente en una red de pruebas sin utilizar ether reales.",
                 "gotoMainnet": "Utilizar la red principal",
-                "gotoMainnetDescription": " Necesitarás algunos Expanse para poder crear y ejecutar contratos. No se preocupe, nosotros le ayudaremos a obtener algunos...",
+                "gotoMainnetDescription": " Necesitarás algunos Ether para poder crear y ejecutar contratos. No se preocupe, nosotros le ayudaremos a obtener algunos...",
                 "doYouHaveAWalletFile": "¿Tiene un archivo de monedero?",
                 "walletFileDescription": "<p>Si participaste en la preventa de Expanse en 2014, deberías tener un archivo llamado <code>ethereum_wallet_backup.json</code>. Se descargó después de la venta y también se envió a su correo electrónico.</p>",
                 "dropFilesHere": "Soltar el archivo de la pre-venta",
@@ -217,9 +218,9 @@
                 "protectDescription": "Elija una contraseña para su nueva cuenta que sea tan fuerte como si fuera a proteger las llaves de su casa!",
                 "accountTitle": "Cargarla!",
                 "accountTitleTestnet": "Minar algunos!",
-                "etherDescription": "La red ethereum está basada en un token llamado “Expanse”. Necesitarás una pequeña cantidad de él para hacer cualquier cosa en la red Expanse.",
+                "etherDescription": "La red ethereum está basada en un token llamado “Ether”. Necesitarás una pequeña cantidad de él para hacer cualquier cosa en la red Expanse.",
                 "loadItDescription": "Si ya dispone de Bitcoin o cualquier otra criptomoneda, puede convertirlas fácilmente a ether utilizando shapeshift. <br><br> Recomendamos una cuantía de entre <strong>0.25 a 1 ether</strong>.",
-                "mineItDescription": "<strong>En la red de pruebas puedes minar ether tú mismo desde el menú <em>Desarrollar</em> y eligiendo <em>Empezar a minar</em>. </strong> <br> <strong> NO INTENTE ENVIAR ETHER REALES A ESTA DIRECCIÓN </strong>",
+                "mineItDescription": "<strong>En la red de pruebas puedes minar ether tú mismo desde el menú <em>Desarrollar</em> y eligiendo <em>Empezar a minar</em>. </strong> <br> <strong> NO INTENTE ENVIAR EXPANSE REALES A ESTA DIRECCIÓN </strong>",
                 "you": "TÚ",
                 "etherbase": "Cuenta principal (etherbase)",
                 "depositBitcoin": "Depositar Bitcoin",

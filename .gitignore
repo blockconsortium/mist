@@ -11,4 +11,4 @@ nodes/gexp/
 config.json
 mist.log
 npm-debug.log
-yarn.lock
+/yarn.lock
