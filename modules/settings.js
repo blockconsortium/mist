@@ -34,7 +34,7 @@ const argv = require('yargs')
         node: {
             demand: false,
             default: null,
-            describe: 'Node to use: geth, eth',
+            describe: 'Node to use: Gexp, eth',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -68,7 +68,7 @@ const argv = require('yargs')
         },
         gethpath: {
             demand: false,
-            describe: 'Path to Geth executable to use instead of default.',
+            describe: 'Path to Gexp executable to use instead of default.',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -118,7 +118,7 @@ const argv = require('yargs')
         syncmode: {
             demand: false,
             requiresArg: true,
-            describe: 'Geth synchronization mode: [fast|light|full]',
+            describe: 'Gexp synchronization mode: [fast|light|full]',
             nargs: 1,
             type: 'string',
             group: 'Mist options:',
@@ -141,7 +141,7 @@ const argv = require('yargs')
             type: 'boolean',
         },
         '': {
-            describe: 'To pass options to the underlying node (e.g. Geth) use the --node- prefix, e.g. --node-datadir',
+            describe: 'To pass options to the underlying node (e.g. Gexp) use the --node- prefix, e.g. --node-datadir',
             group: 'Node options:',
         },
     })

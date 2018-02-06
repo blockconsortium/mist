@@ -211,17 +211,17 @@ let menuTempl = function (webviews) {
                             // geth
                             } else {
                                 if (process.platform === 'darwin') {
-                                    userPath += '/Library/Ethereum/keystore';
+                                    userPath += '/Library/Expanse/keystore';
                                 }
 
                                 if (process.platform === 'freebsd' ||
                                 process.platform === 'linux' ||
                                 process.platform === 'sunos') {
-                                    userPath += '/.ethereum/keystore';
+                                    userPath += '/.expanse/keystore';
                                 }
 
                                 if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+                                    userPath = `${Settings.appDataPath}\\Expanse\\keystore`;
                                 }
                             }
 
@@ -482,17 +482,17 @@ let menuTempl = function (webviews) {
     if (process.platform === 'darwin' || process.platform === 'win32') {
         const nodeSubmenu = [];
 
-        const ethClient = ClientBinaryManager.getClient('eth');
-        const gethClient = ClientBinaryManager.getClient('geth');
+        const ethClient = ClientBinaryManager.getClient('exp');
+        const gethClient = ClientBinaryManager.getClient('gexp');
 
         if (gethClient) {
             nodeSubmenu.push({
-                label: `Geth ${gethClient.version}`,
+                label: `Gexp ${gethClient.version}`,
                 checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
                 click() {
-                    restartNode('geth', null, 'fast', webviews);
+                    restartNode('gexp', null, 'fast', webviews);
                 },
             });
         }
@@ -500,13 +500,13 @@ let menuTempl = function (webviews) {
         if (ethClient) {
             nodeSubmenu.push(
                 {
-                    label: `Eth ${ethClient.version} (C++)`,
+                    label: `Exp ${ethClient.version} (C++)`,
                     checked: ethereumNode.isOwnNode && ethereumNode.isEth,
                     enabled: ethereumNode.isOwnNode,
                     // enabled: false,
                     type: 'checkbox',
                     click() {
-                        restartNode('eth');
+                        restartNode('exp');
                     },
                 }
             );
@@ -572,7 +572,7 @@ let menuTempl = function (webviews) {
             checked: ethereumNode.isLightMode,
             type: 'checkbox',
             click() {
-                restartNode('geth', null, (ethereumNode.isLightMode) ? 'fast' : 'light');
+                restartNode('gexp', null, (ethereumNode.isLightMode) ? 'fast' : 'light');
             },
         });
     }

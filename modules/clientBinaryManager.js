@@ -297,7 +297,7 @@ class Manager extends EventEmitter {
             __dirname,
             '..',
             'nodes',
-            'eth',
+            'exp',
             `${platform}-${process.arch}`
         );
 

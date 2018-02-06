@@ -98,7 +98,7 @@ exports.mocha = (_module, options) => {
 
             this.geth = yield startGeth();
 
-            const appFileName = (options.app === 'wallet') ? 'Ethereum Wallet' : 'Mist';
+            const appFileName = (options.app === 'wallet') ? 'Expanse Wallet' : 'Mist';
             const platformArch = `${process.platform}-${process.arch}`;
 
             let appPath;
