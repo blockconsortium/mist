@@ -9,7 +9,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "128ecd824d2f6fa8a6de3fb34fcbfe4c",
+                            "md5": "ed07d081be4916606826c538d06e7aec",
                             "bin": "gexp-linux-amd64/gexp"
                         },
                         "bin": "gexp",
@@ -24,7 +24,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-linux-386.tar.gz",
                             "type": "tar",
-                            "md5": "2edbfa56fd4fee9927cd98178e7b904d",
+                            "md5": "6323aba7bf26d475295e1e26bfd963ff",
                             "bin": "gexp-linux-386/gexp"
                         },
                         "bin": "gexp",
@@ -41,7 +41,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "12eea2341ad8459df9c8e3a1b4d83b9d",
+                            "md5": "faa512da50c020c2579551effc504c99",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
@@ -58,7 +58,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "3a88a27e9ed903d317ae5e9c83965795",
+                            "md5": "c875b646beec786da0ef5e61b5840819",
                             "bin": "gexp-windows-amd64\\gexp.exe"
                         },
                         "bin": "gexp.exe",
@@ -73,7 +73,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/gexp-windows-386.zip",
                             "type": "zip",
-                            "md5": "ffe35d684109b7deb83b5d30277f2d1c",
+                            "md5": "9ce4a5959d4be5737cae99d0396923e0",
                             "bin": "gexp-windows-386\\gexp.exe"
                         },
                         "bin": "gexp.exe",
