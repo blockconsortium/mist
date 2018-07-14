@@ -41,7 +41,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "4973d0f57ca4c408518d6fd04dc6cffb",
+                            "md5": "edff86ddd558aad631fa347348fbdcd7",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
@@ -58,7 +58,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "38e0fa730fe0609b135d68d86792140a",
+                            "md5": "141a2050ffb32441905129549ec889a2",
                             "bin": "gexp-windows-amd64\\gexp.exe"
                         },
                         "bin": "gexp.exe",
@@ -73,7 +73,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-windows-386.zip",
                             "type": "zip",
-                            "md5": "d4260fe95b331a9c3dd01f343f267cf8",
+                            "md5": "fbcf1ae8ab638c1be1e989370c7fbc84",
                             "bin": "gexp-windows-386\\gexp.exe"
                         },
                         "bin": "gexp.exe",
