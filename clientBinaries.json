@@ -41,7 +41,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "5d672c6d2e9b428eea7cbba0e30ce2c5",
+                            "md5": "0b08f0840eb8ddb06db04ba980ae5700",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
