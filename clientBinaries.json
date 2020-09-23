@@ -2,7 +2,7 @@
 {
     "clients": {
         "Gexp": {
-            "version": "1.9.10-stable",
+            "version": "1.9.20-stable",
             "platforms": {
                 "linux": {
                     "x64": {
