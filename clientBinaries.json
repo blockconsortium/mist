@@ -58,7 +58,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "fda2fdca62520ddc418e17ac846625af",
+                            "md5": "e6c54434fb426823f89cf8e3d653f2e9",
                             "bin": "gexp-windows-amd64\\gexp.exe"
                         },
                         "bin": "gexp.exe",
@@ -73,7 +73,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-windows-386.zip",
                             "type": "zip",
-                            "md5": "ad0c610c687615326644e3acba445e06",
+                            "md5": "1f80405fd0fb472213aac91dfd7c034d",
                             "bin": "gexp-windows-386\\gexp.exe"
                         },
                         "bin": "gexp.exe",
