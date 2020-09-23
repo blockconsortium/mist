@@ -9,14 +9,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "d7ec1e8834252482d1f87c610a2b09f9",
+                            "md5": "0c63ca74f44993c219ac58b5fc0fedab",
                             "bin": "gexp-linux-amd64/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.9.10-stable" ]
+                                "output": [ "Gexp", "1.9.20-stable" ]
                             }
                         }
                     },
@@ -24,14 +24,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-linux-386.tar.gz",
                             "type": "tar",
-                            "md5": "2fdba53bfe0bef23b4c491b490e288b1",
+                            "md5": "afeb91c401811ba98d4345a000a8e904",
                             "bin": "gexp-linux-386/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.9.10-stable" ]
+                                "output": [ "Gexp", "1.9.20-stable" ]
                             }
                         }
                     }
@@ -41,14 +41,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "6e24889e112d762620ad69b7730d8351",
+                            "md5": "263c5833925a312d46af7eae83db2238",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.9.10-stable" ]
+                                "output": [ "Gexp", "1.9.20-stable" ]
                             }
                         }
                     }
@@ -58,14 +58,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-windows-amd64.zip",
                             "type": "zip",
-                            "md5": "dd3a1a7f9b8f6ee26d7a99484ba3aab4",
+                            "md5": "1199aa398a5ccbc0079bf43819f80574",
                             "bin": "gexp-windows-amd64\\gexp.exe"
                         },
                         "bin": "gexp.exe",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.9.10-stable" ]
+                                "output": [ "Gexp", "1.9.20-stable" ]
                             }
                         }
                     },
@@ -73,14 +73,14 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-windows-386.zip",
                             "type": "zip",
-                            "md5": "03126caf3d65c6e182eb2d84229f6bfc",
+                            "md5": "ad0c610c687615326644e3acba445e06",
                             "bin": "gexp-windows-386\\gexp.exe"
                         },
                         "bin": "gexp.exe",
                         "commands": {
                             "sanity": {
                                 "args": ["version"],
-                                "output": [ "Gexp", "1.9.10-stable" ]
+                                "output": [ "Gexp", "1.9.20-stable" ]
                             }
                         }
                     }
