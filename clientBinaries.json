@@ -9,7 +9,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-linux-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "0c63ca74f44993c219ac58b5fc0fedab",
+                            "md5": "4f29d6854fdbfcfceee982f52369db6a",
                             "bin": "gexp-linux-amd64/gexp"
                         },
                         "bin": "gexp",
@@ -24,7 +24,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-linux-386.tar.gz",
                             "type": "tar",
-                            "md5": "afeb91c401811ba98d4345a000a8e904",
+                            "md5": "ab74aef4d52c99dc32678bd2ef625865",
                             "bin": "gexp-linux-386/gexp"
                         },
                         "bin": "gexp",
@@ -41,7 +41,7 @@
                         "download": {
                             "url": "http://build.expanse.tech/release/latest/gexp-darwin-amd64.tar.gz",
                             "type": "tar",
-                            "md5": "263c5833925a312d46af7eae83db2238",
+                            "md5": "3a44f7b4e6c74f2b5710a5d31502588e",
                             "bin": "gexp-darwin-amd64/gexp"
                         },
                         "bin": "gexp",
